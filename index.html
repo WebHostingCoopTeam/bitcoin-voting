@@ -1,193 +1,381 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8' />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-  <meta name="description" content="Bitcoin-voting : A schema to utilize Bitcoin cryptocurrency for secure and simple electronic voting" />
-  <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-  <title>Bitcoin-voting</title>
-</head>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Bitcoin-voting by WebHostingCoopTeam</title>
+  </head>
 
-<body>
+  <body>
+    <div id="container">
+      <div class="inner">
 
-  <!-- HEADER -->
-  <div id="header_wrap" class="outer">
-    <header class="inner">
-      <a id="forkme_banner" href="https://github.com/arikan/bitcoin-voting">View on GitHub</a>
+        <header>
+          <h1>Bitcoin-voting</h1>
+          <h2>A schema to utilize Bitcoin cryptocurrency for secure and simple electronic voting</h2>
+        </header>
 
-      <h1 id="project_title">Bitcoin-voting</h1>
-      <h2 id="project_tagline">A schema to utilize Bitcoin cryptocurrency for secure and simple electronic voting</h2>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/WebHostingCoopTeam/bitcoin-voting/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/WebHostingCoopTeam/bitcoin-voting/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/WebHostingCoopTeam/bitcoin-voting" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-      <section id="downloads">
-        <a class="zip_download_link" href="https://github.com/arikan/bitcoin-voting/zipball/master">Download this project as a .zip file</a>
-        <a class="tar_download_link" href="https://github.com/arikan/bitcoin-voting/tarball/master">Download this project as a tar.gz file</a>
-      </section>
-    </header>
-  </div>
+        <hr>
 
-  <!-- MAIN CONTENT -->
-  <div id="main_content_wrap" class="outer">
-    <section id="main_content" class="inner">
-      <a href="#en">English</a> ∙
-      <a href="#tr">Türkçe</a>
+        <section id="main_content">
+          <p><a href="#simple-and-secure-voting-system-with-bitcoin">English</a> ∙ <a href="#bitcoin-ile-g%C3%BCvenli-ve-basit-bir-oy-sistemi">Türkçe</a> ∙ 
+<a href="#sistem-pengundian-selamat-dan-mudah-dengan-bitcoin">Bahasa Malaysia</a></p>
 
-      <a name="en"></a>
+<h2>
+<a id="simple-and-secure-voting-system-with-bitcoin" class="anchor" href="#simple-and-secure-voting-system-with-bitcoin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple and secure voting system with Bitcoin</h2>
 
-      <h3>
-        <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages">
-          <span class="octicon octicon-link"></span>
-        </a>
-        Simple and secure voting system with Bitcoin
-      </h3>
-      <p>
-        A schema designed to utilize Bitcoin cryptocurrency for secure and simple electronic voting. In the heart of the schema lies the Blockchain, so all the processes of the system are open to public audition.
-      </p>
-      <p>
-        <h4>Requirements:</h4>
-        <ul>
-          <li>All actors of the election should be able to have a Bitcoin account.</li>
-          <li>All actors of the election should be able to secure their voting computer.</li>
-        </ul>
-      </p>
-      <p>
-        <h4>Actors:</h4>
-        <ul>
-          <li>Election Authority</li>
-          <li>Candidate</li>
-          <li>Voter</li>
-        </ul>
-      </p>
-      <p>
-        <h4>Terminology:</h4>
-        <ul>
-          <li>Block Chain: Bitcoin public transaction list</li>
-          <li>0.00000001 Bitcoin: the smallest unit of Bitcoin</li>
-          <li>BTC: Abbreviation for Bitcoin currency</li>
-        </ul>
-      </p>
-      <p>
-        <h4>Schema:</h4>
-      </p>
-      <p>
-        <strong>0. Election Authority declaration:</strong>
-        Election Authority publicly announces its Bitcoin address.
-      </p>
-      <p>
-        <strong>1. Voter registration:</strong>
-        Voters show a valid ID and provide their Bitcoin address to Election Authority, who sends them 0.00000001 BTC in return. All voter Bitcoin addresses are publicly listed in the Blockchain. To carry out citizens' right to vote anonymously, the Election Authority keeps the IDs to prevent double registration but does not keep a record of association between the IDs and the provided Bitcoin addresses.
-      </p>
-      <p>
-        <strong>2. Candidate registration:</strong>
-        Candidates provide a valid ID and their Bitcoin address to Election Authority, who sends them 0.00000002 BTC in return. All candidate Bitcoin addresses are publicly listed in the Blockchain. As opposed to voter registration, Election Authority keeps and publicly announces a record of association between each candidate ID and their provided Bitcoin address. Candidates are obliged to announce their Bitcoin addresses.
-      </p>
-      <p>
-        <strong>3. Starting the election:</strong>
-        Election starts when Election Authority sends 0.00000001 BTC to all the voters' Bitcoin addresses publicly listed in the BLockchain.
-      </p>
-      <p>
-        <strong>4. Voting:</strong>
-        Voters send 0.00000001 BTC to their preferred candidate's Bitcoin addresses publicly listed in the Blockchain.
-      </p>
-      <p>
-        <strong>5. Ending the election:</strong>
-        Election ends when all voting transactions are processed for each candidate in the Blockchain. A time limit can be also put in place.
-      </p>
-      <p>
-        <strong>6. Election result:</strong>
-        Election result is obtained by counting all valid voting transactions from the registered voting addresses to the registered candidate addresses in the Blockchain. Any other transaction after the first 0.00000001 BTC transaction from the voter to the candidate is considered disqualified. The whole process from the registrations to the voting and counting the results is open to audition by anyone.
-      </p>
-      <p>
-        <h4>Contribution</h4>
-        This basic schema can be implemented today with the existing Bitcoin infrastructure. One can develop applications and interfaces for better user experience of this system. Please send your comments and questions on issues and feel free to fork the repository and send pull requests.
-      </p>
-      <p>
-        <h4>License</h4>
-        <a href="https://github.com/arikan/bitcoin-voting/blob/master/LICENSE">The MIT License (MIT)</a>
-      </p>
+<p>A schema designed to utilize Bitcoin cryptocurrency for secure and simple electronic voting. In the heart of the schema lies the <a href="https://en.wikipedia.org/wiki/Bitcoin#Block_chain">Blockchain</a>, so all the processes of the system are open to public audition.</p>
 
-      <hr>
+<h4>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements:</h4>
 
-      <a name="tr"></a>
+<ul>
+<li>All actors of the election should be able to have a Bitcoin account.</li>
+<li>All actors of the election should be able to secure their voting computer.</li>
+</ul>
 
-      <h3>Bitcoin ile güvenli ve basit bir oy sistemi</h3>
-      <p>
-        Şifreli elektronik para birimi Bitcoin 2009'da ilk kullanıma girdiğinden beri internet üzerinde çalışan bir değer aktarım katmanı olarak hızla yayılmakta. Alışveriş ve borsalar dışında elektronik noterlik, elektronik sözleşme vb pek çok farklı alanda kullanılmakta.
-      </p>
-      <p>
-        Aşağıda göreceğiniz Bitcoin ile çalışan bir sistem şemasıdır. Herkese açık ve anonim kayıt tutan Bitcoin işlem defteri Blockchain bu sistemin çekirdeğini oluşturmakta ve aşağıda belirtilen tüm aşamalar isteyen herkesin denetimine açıktır ve Bitcoin doğası gereği tüm işlemler şifrelidir.
-      </p>
-      <p>
-        <h4>Gereksinimler:</h4>
-        <ul>
-          <li>Seçime katılacak tüm taraflar birer Bitcoin hesabı açabilmelidir.</li>
-          <li>Seçime katılacak tüm taraflar oy verecekleri bilgisayarın güvenliğini sağlayabilmelidir.</li>
-        </ul>
-      </p>
-      <p>
-        <h4>Aktörler:</h4>
-        <ul>
-          <li>Seçim Düzenleyicisi (Örn yüksek seçim kurulu)</li>
-          <li>Aday (Örn Belediye Başkanı Adayı ya da Siyasi Parti)</li>
-          <li>Seçmen (Örn oy verebilen vatandaş)</li>
-        </ul>
-      </p>
-      <p>
-        <h4>Terimler:</h4>
-        <ul>
-          <li>Blockchain: Herkese açık Bitcoin işlem defteri</li>
-          <li>0.00000001 bitcoin: Mümkün olan en küçük Bitcoin birimi</li>
-          <li>BTC: Bitcoin para birimi kısaltması</li>
-        </ul>
-      </p>
-      <p>
-        <h4>Şema:</h4>
-      </p>
-      <p>
-        <strong>0. Seçim Düzenleyicisi'nin ilanı:</strong>
-        Seçim Düzenleyicisi Bitcoin hesap numarasını ilan eder.
-      </p>
-        <strong>1. Seçmen kaydı:</strong>
-        Seçim Düzenleyicisi kimliğini gösterip Bitcoin hesabını ibraz eden her seçmene 0.00000001 BTC gönderir. Böylece seçmenlerin Bitcoin adresleri Blockchain'de listelenmiş olur. Seçmenlerin anonim oy verme hakkını kullanabilmesi için Seçim Düzenleyicisi kayıt aşamasında kaydın bir defa yapıldığını kontrol etmek üzere sadece kimlik bilgisini tutar, Bitcoin hesap numarası kayıt edilmemelidir.
-      </p>
-      <p>
-        <strong>2. Aday kaydı:</strong>
-        Seçim Düzenleyicisi kimliğini ve Bitcoin hesabını ibraz eden her adayın hesabına 0.00000002 BTC gönderir. Böylece adaylar Blockchain'de listelenmiş olur. Seçmen kaydının tersine Seçim Düzenleyicisi Adayları kaydederken kimlik bilgisiyle Bitcoin hesabını eşleştirerek tutmak ve eşleştirmeyi herkese açıklamak zorundadır. Seçim Düzenleyicisi'nin Bitcoin hesabından gönderilen 0.00000002 bitcoini alanlar aday olarak listelenmiş olur. Adaylar Bitcoin hesaplarını ilan etmekle yükümlüdür.
-      </p>
-      <p>
-        <strong>3. Seçimi başlatma:</strong>
-        Seçim Düzenleyicisi listelenmiş tüm seçmenlere tekrar 0.00000001 BTC gönderdiğinde seçim başlar.
-      </p>
-      <p>
-        <strong>4. Oy verme:</strong>
-        Seçmenler listelenen adaylardan birine 0.00000001 BTC gönderdiklerinde oy vermiş olurlar. Bir seçmenin hesabından listelenen Adaylardan birinin hesabına sadece bir defa gönderim yapabilir, ilk gönderim sonrasında yapılacak herhangi bir gönderim geçersiz sayılır.
-      </p>
-      <p>
-        <strong>5. Seçimi bitirme:</strong>
-        Tüm kayıtlı seçmenler oy verdiğinde seçim biter. Ayrıca seçimi bitirmek için zaman sınırı da koyulabilir.
-      </p>
-      <p>
-        <strong>6. Oy dökümü ve sayım:</strong>
-        Herkese açık Bitcoin işlem defteri Blockchain'den tüm seçmenlerin listelenmiş adaylara gönderdiği tüm geçerli gönderimler sayılırak seçim sonucu belirlenir. Seçim süreci başlangıcındaki kayıt aşamasından listelenmeye, oy vermeye, ve sonuçların sayılmasına kadar tümüyle Bitcoin Blockhain'de herkesin denetimine açık olarak kayıt altındadır.
-      </p>
-      <p>
-        <h4>Katılım</h4>
+<h4>
+<a id="actors" class="anchor" href="#actors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Actors:</h4>
 
-        Bu temel sistem mevcut Bitcoin altyapısı ile bugün uygulamaya koyulabilir. Daha kolay kullanımlar için seçime özel uygulamalar ve arayüzler geliştirilebilir. Sistemle ilgili gördüğünüz açıklar ve iyileştirmeler için lütfen önerilerinizi ve eleştirilerinizi gönderiniz. Ayrıca doğrudan repo'dan fork/pull ile değiştirebilir ve katkıda bulunabilirsiniz.
-      </p>
-      <p>
-        <h4>Lisans</h4>
-        <a href="https://github.com/arikan/bitcoin-voting/blob/master/LICENSE">The MIT License (MIT)</a>
-      </p>
-    </section>
-  </div>
+<ul>
+<li>Election Authority</li>
+<li>Candidate</li>
+<li>Voter</li>
+</ul>
 
-  <!-- FOOTER  -->
-  <div id="footer_wrap" class="outer">
-    <footer class="inner">
-      <p class="copyright">Bitcoin-voting maintained by <a href="https://github.com/arikan">arikan</a></p>
-      <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-    </footer>
-  </div>
+<h4>
+<a id="terminology" class="anchor" href="#terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminology:</h4>
 
+<ul>
+<li>Block Chain: Bitcoin public transaction list</li>
+<li>0.00000001 Bitcoin: the smallest unit of Bitcoin</li>
+<li>BTC: Abbreviation for Bitcoin currency</li>
+</ul>
+
+<h4>
+<a id="schema" class="anchor" href="#schema" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schema:</h4>
+
+<ol>
+<li>
+<p><strong>Election Authority declaration:</strong></p>
+
+<ul>
+<li>Election Authority publicly announces its Bitcoin address.</li>
+</ul>
+</li>
+<li>
+<p><strong>Voter registration:</strong></p>
+
+<ul>
+<li>Voters show a valid ID and provide their Bitcoin address to Election Authority, who sends them 0.00000001 BTC in return. </li>
+<li>All voter Bitcoin addresses are publicly listed in the Blockchain. </li>
+<li>To carry out citizens' right to vote anonymously, the Election Authority keeps the IDs to prevent double registration but does not keep a record of association between the IDs and the provided Bitcoin addresses.</li>
+</ul>
+</li>
+<li>
+<p><strong>Candidate registration:</strong></p>
+
+<ul>
+<li>Candidates provide a valid ID and their Bitcoin address to Election Authority, who sends them 0.00000002 BTC in return.</li>
+<li>All Candidate Bitcoin addresses are publicly listed in the Blockchain. </li>
+<li>As opposed to Voter registration, Election Authority stores and publicly announces a record of association between each candidate ID and their provided Bitcoin address. </li>
+<li>Candidates are obliged to announce their Bitcoin addresses.</li>
+</ul>
+</li>
+<li>
+<p><strong>Starting the election:</strong></p>
+
+<ul>
+<li>Election starts when Election Authority sends 0.00000001 BTC to all the Voters' Bitcoin addresses publicly listed in the Blockchain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Voting:</strong></p>
+
+<ul>
+<li>Voters send 0.00000001 BTC to their preferred candidate's Bitcoin addresses publicly listed in the Blockchain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ending the election:</strong></p>
+
+<ul>
+<li>Election ends when all voting transactions are processed for each candidate in the Blockchain. </li>
+<li>If time limit is put in place, Election Authority must declare the election start and end date and time. </li>
+<li>If this is a time limited election, any vote before the start datetime and after end datetime is considered invalid.</li>
+</ul>
+</li>
+<li>
+<p><strong>Election result:</strong></p>
+
+<ul>
+<li>Election result is obtained by counting all valid voting transactions from the registered voting addresses to the registered candidate addresses in the Blockchain. </li>
+<li>Any other transaction after the first 0.00000001 BTC transaction from the Voter to the Candidate is considered disqualified. </li>
+<li>The whole process from the registrations to the voting and counting the results is open to audition by anyone.</li>
+</ul>
+</li>
+</ol>
+
+<h4>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h4>
+
+<p>This basic schema can be implemented today with the existing Bitcoin infrastructure. One can develop applications and interfaces for better user experience of this system. Please send your comments and questions on issues and feel free to fork the repository and send pull requests.</p>
+
+<h4>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h4>
+
+<p><a href="https://github.com/arikan/bitcoin-voting/blob/master/LICENSE">The MIT License (MIT)</a></p>
+
+<h2>
+<a id="bitcoin-ile-güvenli-ve-basit-bir-oy-sistemi" class="anchor" href="#bitcoin-ile-g%C3%BCvenli-ve-basit-bir-oy-sistemi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bitcoin ile güvenli ve basit bir oy sistemi</h2>
+
+<p>Şifreli elektronik para birimi Bitcoin 2009'da ilk kullanıma girdiğinden beri internet üzerinde çalışan bir değer aktarım katmanı olarak hızla yayılmakta. Alışveriş ve borsalar dışında elektronik noterlik, elektronik sözleşme vb pek çok farklı alanda kullanılmakta.</p>
+
+<p>Aşağıda göreceğiniz Bitcoin ile çalışan bir sistem şemasıdır. Herkese açık ve anonim kayıt tutan Bitcoin işlem defteri Blockchain bu sistemin çekirdeğini oluşturmakta ve aşağıda belirtilen tüm aşamalar isteyen herkesin denetimine açıktır ve Bitcoin doğası gereği tüm işlemler şifrelidir.</p>
+
+<h4>
+<a id="gereksinimler" class="anchor" href="#gereksinimler" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gereksinimler:</h4>
+
+<ul>
+<li>Seçime katılacak tüm taraflar birer Bitcoin hesabı açabilmelidir.</li>
+<li>Seçime katılacak tüm taraflar oy verecekleri bilgisayarın güvenliğini sağlayabilmelidir.</li>
+</ul>
+
+<h4>
+<a id="aktörler" class="anchor" href="#akt%C3%B6rler" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aktörler:</h4>
+
+<ul>
+<li>Seçim Düzenleyicisi (Örn yüksek seçim kurulu)</li>
+<li>Aday (Örn Belediye Başkanı Adayı ya da Siyasi Parti)</li>
+<li>Seçmen (Örn oy verebilen vatandaş)</li>
+</ul>
+
+<h4>
+<a id="terimler" class="anchor" href="#terimler" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terimler:</h4>
+
+<ul>
+<li>Blockchain: Herkese açık Bitcoin işlem defteri</li>
+<li>0.00000001 bitcoin: Mümkün olan en küçük Bitcoin birimi</li>
+<li>BTC: Bitcoin para birimi kısaltması</li>
+</ul>
+
+<h4>
+<a id="Şema" class="anchor" href="#%C5%9Eema" aria-hidden="true"><span class="octicon octicon-link"></span></a>Şema:</h4>
+
+<ol>
+<li>
+<p><strong>Seçim Düzenleyicisi'nin ilanı:</strong></p>
+
+<ul>
+<li>Seçim Düzenleyicisi Bitcoin hesap numarasını ilan eder.</li>
+</ul>
+</li>
+<li>
+<p><strong>Seçmen kaydı:</strong></p>
+
+<ul>
+<li>Seçim Düzenleyicisi kimliğini gösterip Bitcoin hesabını ibraz eden her seçmene 0.00000001 BTC gönderir. </li>
+<li>Böylece, tüm seçmenlerin Bitcoin adresleri Blockchain'de listelenmiş olur. </li>
+<li>Seçmenlerin anonim oy verme hakkını kullanabilmesi için Seçim Düzenleyicisi kayıt aşamasında kaydın bir defa yapıldığını kontrol etmek üzere sadece kimlik bilgisini tutar, Bitcoin hesap numarası kayıt edilmemelidir.</li>
+</ul>
+</li>
+<li>
+<p><strong>Aday kaydı:</strong></p>
+
+<ul>
+<li>Seçim Düzenleyicisi kimliğini ve Bitcoin hesabını ibraz eden her adayın hesabına 0.00000002 BTC gönderir. </li>
+<li>Böylece adaylar Blockchain'de listelenmiş olur. </li>
+<li>Seçmen kaydının tersine Seçim Düzenleyicisi Adayları kaydederken kimlik bilgisiyle Bitcoin hesabını eşleştirerek tutmak ve eşleştirmeyi herkese açıklamak zorundadır. </li>
+<li>Seçim Düzenleyicisi'nin Bitcoin hesabından gönderilen 0.00000002 bitcoin alanlar aday olarak listelenmiş olur. </li>
+<li>Adaylar Bitcoin hesaplarını ilan etmekle yükümlüdür.</li>
+</ul>
+</li>
+<li>
+<p><strong>Seçimi başlatma:</strong></p>
+
+<ul>
+<li>Seçim Düzenleyicisi listelenmiş tüm seçmenlere tekrar 0.00000001 BTC gönderdiğinde seçim başlar.</li>
+</ul>
+</li>
+<li>
+<p><strong>Oy verme:</strong></p>
+
+<ul>
+<li>Seçmenler listelenen adaylardan birine 0.00000001 BTC gönderdiklerinde oy vermiş olurlar.</li>
+<li>Bir seçmenin hesabından listelenen Adaylardan birinin hesabına sadece bir defa gönderim yapabilir, ilk gönderim sonrasında yapılacak herhangi bir gönderim geçersiz sayılır.</li>
+</ul>
+</li>
+<li>
+<p><strong>Seçimi bitirme:</strong></p>
+
+<ul>
+<li>Tüm kayıtlı seçmenler oy verdiğinde seçim biter.</li>
+<li>Seçimi bitirmek için zaman sınırı koyulursa, Seçim Düzenleyicisi başlangıç ve bitiş zamanını seçim başında ilan etmek zorundadır.</li>
+<li>Zaman sınırılı seçimde, başlangıç zamanında önce ve bitiş zamanından sonra verilen oylar geçersizdir.</li>
+</ul>
+</li>
+<li>
+<p><strong>Oy dökümü ve sayım:</strong></p>
+
+<ul>
+<li>Herkese açık Bitcoin işlem defteri Blockchain'den tüm seçmenlerin listelenmiş adaylara gönderdiği tüm geçerli gönderimler sayılırak seçim sonucu belirlenir. </li>
+<li>Seçim süreci başlangıcındaki kayıt aşamasından listelenmeye, oy vermeye, ve sonuçların sayılmasına kadar tümüyle Bitcoin Blockhain'de herkesin denetimine açık olarak kayıt altındadır.</li>
+</ul>
+</li>
+</ol>
+
+<h4>
+<a id="katılım" class="anchor" href="#kat%C4%B1l%C4%B1m" aria-hidden="true"><span class="octicon octicon-link"></span></a>Katılım</h4>
+
+<p>Bu temel sistem mevcut Bitcoin altyapısı ile bugün uygulamaya koyulabilir. Daha kolay kullanımlar için seçime özel uygulamalar ve arayüzler geliştirilebilir. Sistemle ilgili gördüğünüz açıklar ve iyileştirmeler için lütfen önerilerinizi ve eleştirilerinizi gönderiniz. Ayrıca doğrudan repo'dan fork/pull ile değiştirebilir ve katkıda bulunabilirsiniz.</p>
+
+<h4>
+<a id="lisans" class="anchor" href="#lisans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lisans</h4>
+
+<p><a href="https://github.com/arikan/bitcoin-voting/blob/master/LICENSE">The MIT License (MIT)</a></p>
+
+<h2>
+<a id="sistem-pengundian-selamat-dan-mudah-dengan-bitcoin" class="anchor" href="#sistem-pengundian-selamat-dan-mudah-dengan-bitcoin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sistem pengundian selamat dan mudah dengan Bitcoin</h2>
+
+<p>Kaedah kerja menggunakan matawang kripto Bitcoin sebagai sistem pengundian yang selamat dan mudah. Di dalam kaedah ini juga menggunakan algoritma <a href="http://en.wikipedia.org/wiki/Blockchain">Blockchain</a> agar semua proses adalah terbuka kepada semua Rakyat.</p>
+
+<h4>
+<a id="keperluan" class="anchor" href="#keperluan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Keperluan:</h4>
+
+<ul>
+<li>Kesemua aktor pengundian harus mempunyai satu akaun Bitcoin (wallet).</li>
+<li>Kesemua aktor pengundian harus menggunakan komputer untuk mengundi.</li>
+</ul>
+
+<h4>
+<a id="aktor" class="anchor" href="#aktor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aktor:</h4>
+
+<ul>
+<li>Pihak Berkuasa Pengundian (SPR)</li>
+<li>Calon</li>
+<li>Pengundi (Rakyat)</li>
+</ul>
+
+<h4>
+<a id="terminologi" class="anchor" href="#terminologi" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminologi:</h4>
+
+<ul>
+<li>Block Chain: Senarai awam transaksi Bitcoin</li>
+<li>1 Satoshi (0.00000001 Bitcoin): Unit terkecil matawang Bitcoin</li>
+<li>BTC: Singkatan matawang Bitcoin</li>
+</ul>
+
+<h4>
+<a id="skema" class="anchor" href="#skema" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skema:</h4>
+
+<ol>
+<li>
+<p><strong>Deklarasi Pihak Berkuasa Pengundian:</strong></p>
+
+<ul>
+<li>Pihak Berkuasa Pengundian mengumumkan alamat Bitcoin secara terbuka.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pendaftaran pengundi:</strong></p>
+
+<ul>
+<li>Pengundi menyediakan ID dan alamat Bitcoin yang sah kepada Pihak Berkuasa Pengundian, seterusnya menyalurkan 1 Satoshi kepada pengundi tersebut.</li>
+<li>Semua alamat Bitcoin calon akan dipaparkan secara terbuka di dalam Blockchain.</li>
+<li>Untuk mengekalkan privasi pengundi, Pihak Berkuasa Pengundian menyimpan ID untuk mengelakkan pendaftaran berganda, tetapi tidak menyimpan rekod yang berkaitan dengan ID dan alamat Bitcoin yang diberikan.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pendaftaran calon:</strong></p>
+
+<ul>
+<li>Calon menyediakan ID dan alamat Bitcoin yang sah kepada Pihak Berkuasa Pengundian, seterusnya menyalurkan 2 Satoshi kepada calon tersebut.</li>
+<li>Semua alamat Bitcoin calon akan dipaparkan secara terbuka di dalam Blockchain.</li>
+<li>Dalam hal calon, Pihak Berkuasa Pengundian akan menyimpan rekod berkaitan ID dan alamat Bitcoin calon, dan berkuasa untuk memaparkan kedua-duanya secara terbuka.</li>
+<li>Calon calon wajib mengumumkan alamat Bitcoin mereka.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pilihan raya:</strong></p>
+
+<ul>
+<li>Pilihan raya bermula apabila Pihak Berkuasa Pengundian menyalurkan 1 Satoshi kepada semua alamat Bitcoin pengundi.</li>
+<li>Alamat Bitcoin pengundi boleh disemak di Blockchain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pengundian:</strong></p>
+
+<ul>
+<li>Pengundi akan melakukan pemindahan/transaksi 1 Satoshi kepada alamat Bitcoin calon yang dipilih.</li>
+<li>Proses transaksi Satoshi boleh disemak di Blockchain.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pengakhiran proses pengundian:</strong></p>
+
+<ul>
+<li>Proses pengundian akan berakhir apabila semua transaksi telah diproses dan disahkan oleh Pihak Berkuasa Pengundian.</li>
+<li>Had masa juga boleh di gunakan dalam proses ini.</li>
+<li>Jika had masa ditetapkan, Pihak Berkuasa Pengundian harus mengumumkan waktu mula dan akhir pengundian tersebut.</li>
+<li>Jika pengundian ditetapkan had masa, apa-apa undi sebelum dan selepas had masa di kira tidak sah.</li>
+</ul>
+</li>
+<li>
+<p><strong>Election result:</strong></p>
+
+<ul>
+<li>Keputusan pengundian diputuskan dengan mengira semua transaksi yang sah daripada alamat pengundian menggunakan Blockchain API.</li>
+<li>Apa-apa transaksi selepas 1 Satoshi yang disalurkan adalah dikira tidak sah.</li>
+<li>Semua proses-proses di atas daripada proses pendaftaran adalah terbuka kepada semua Rakyat.</li>
+</ul>
+</li>
+</ol>
+
+<h4>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Todo</h4>
+
+<ul>
+<li>Ikut proses sebenar PRU Malaysia</li>
+<li>Cari isu berbangkit dalam kaedah ini</li>
+</ul>
+
+<h4>
+<a id="sumbangan" class="anchor" href="#sumbangan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sumbangan:</h4>
+
+<ul>
+<li>Kaedah asas ini boleh dilaksanakan menggunakan infrastruktur Bitcoin yang sedia ada.</li>
+<li>Sumbangan kepada teknologi boleh dilakukan dengan membina sebuah aplikasi sistem antara muka untuk pengalaman pengguna yang baik.</li>
+<li>Anda boleh menyumbang dengan memberi pendapat dan soalan berkaitan isu-isu berbangkit.</li>
+<li>Adalah digalakkan untuk fork repositori dan hantar pull request.</li>
+</ul>
+
+<h4>
+<a id="lesen" class="anchor" href="#lesen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lesen</h4>
+
+<p><a href="https://github.com/arikan/bitcoin-voting/blob/master/LICENSE">The MIT License (MIT)</a></p>
+        </section>
+
+        <footer>
+          Bitcoin-voting is maintained by <a href="https://github.com/WebHostingCoopTeam">WebHostingCoopTeam</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
   </body>
 </html>
